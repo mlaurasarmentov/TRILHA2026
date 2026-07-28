@@ -1,0 +1,17 @@
+itens = {}
+
+for i in range(int(input())):
+    soma = 0
+    
+    for j in range(int(input())):
+        chave, valor = input().split()
+
+        itens[chave] = float(valor)
+
+    for k in range(int(input())):
+        resp, num = input().split()
+
+        if resp in itens:
+            soma += itens[resp] * float(num)
+
+    print(f"R$ {soma:.2f}")
